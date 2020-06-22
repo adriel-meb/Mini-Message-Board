@@ -7,14 +7,17 @@
 
 main{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: #f2f4f7; 
     padding-bottom: 6rem;
 }
 
 h1{
-    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
 }
 
 html{
@@ -24,23 +27,45 @@ html{
 }
 
 .msg-board{
-   
+   display: flex;
+   flex-direction: row-reverse;
+   flex-wrap: wrap;
+  
+}
+
+#button{
+    font-family: 'MuseoModerno', cursive;
+    text-align: center;
+ 
 }
 
 button{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 1em;
+    cursor: pointer;
+    color: #f2f4f7;
+    background-color: #5000CA;
+    border: none;
+    border-radius: 15px;
 }
+
+    button:hover{
+        background-color:#7742c5 ;
+    }
   
   .msg-card {
     
-    border: 1px solid #000b76;
+    border: 1px solid #5000CA;
     border-radius: 10px;
     margin: 6px auto;
     padding: 15px;
-    width: 40%;
+    width: 30%;
+    
   
+  }
+
+  .msg-card:hover {
+      transition: all 1s;
+    background-color: #5000CA;
   }
   
   .msg-card .msg-card-header {
@@ -61,4 +86,33 @@ button{
   .msg-card .msg {
     padding: 10px 0;
   }
+
+  .timestamp{
+      float: right;
+  }
+
+  footer{
+      text-align: center;
+      background-color: #5000CA;
+      color: #f2f4f7;
+  }
   
+  @media only screen and (max-width: 768px) {
+    .msg-board{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap; 
+     }
+
+     .msg-card {
+        border: 1px solid #5000CA;
+        border-radius: 10px;
+        width: 80%;
+      
+      }
+
+      h1{
+          font-size: 1.2em;
+      }
+
+  }
