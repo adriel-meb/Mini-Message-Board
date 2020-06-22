@@ -1,5 +1,5 @@
 # Mini-Message-Board
-Project based on The Odin Project curriculum. The project acts as an introductory exercise to using the Express framework.
+Project based on The Odin Project [curriculum](https://www.theodinproject.com/courses/nodejs/lessons/mini-message-board?ref=lnav). The project acts as an introductory exercise to using the Express framework.
 
 # Objectives:
 * Initiate an Express project.
