@@ -2,36 +2,21 @@ const express= require("express");
 const app = express();
 const route= require('./routes/index');
 const path = require('path');
+var bodyParser = require('body-parser')
 
+//View Engine
 app.set('view engine', 'ejs');
+
+//body parser middleware
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-//sample test
-const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date()
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date()
-    }
- ];
 
-
- //Main route
-app.get('/', (req,res)=>{
-    res.render("home", {messages})
-})
-
-app.get('/new', (req,res)=>{
-    res.render("newMessage")
-})
-
+// Routes
+app.use('/', require('./routes/index'));
 
 
 const PORT =process.env.PORT || 3000;

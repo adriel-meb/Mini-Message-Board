@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>New Message</title>
 </head>
 <body>
-    <h1>New Message</h1>
+<main>
+    <%- include('./header.ejs')-%>
+
+    <h2>Add a new message</h2>
+    <div class="form">
+        <form action="/new" method="post">
+            <div id="div-input">
+                <label for="user">User</label>
+                <input type="text" name="user">
+            </div>
+            
+     <div id="text-area">
+        <label for="text"> Message</label>
+        <textarea name="text" id="textarea" cols="30" rows="10"></textarea>
+     </div>
+    
+            <button type="submit" id="submit-button">Add Message</button>
+    
+        </form>
+
+    </div>
+
+<script src="/js/main"></script>
+</main>
 </body>
 </html>

@@ -20,6 +20,13 @@ h1{
     color: white;
 }
 
+h2{
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  color: #5000ca;
+}
+
 html{
     font-size: 1em;
     box-sizing: border-box;
@@ -36,10 +43,11 @@ html{
 #button{
     font-family: 'MuseoModerno', cursive;
     text-align: center;
+    margin-bottom: 1em;
  
 }
 
-button{
+#add-post{
     padding: 1em;
     cursor: pointer;
     color: #f2f4f7;
@@ -48,8 +56,18 @@ button{
     border-radius: 15px;
 }
 
-    button:hover{
+    #add-post:hover{
         background-color:#7742c5 ;
+       
+    }
+
+    a{
+      text-decoration: none;
+    
+    }
+
+    #headerTitle{
+      color: #f2f4f7;
     }
   
   .msg-card {
@@ -66,6 +84,7 @@ button{
   .msg-card:hover {
       transition: all 1s;
     background-color: #5000CA;
+   
   }
   
   .msg-card .msg-card-header {
@@ -97,6 +116,52 @@ button{
       color: #f2f4f7;
   }
   
+.form{
+      display: block;
+      text-align: center;
+  }
+
+form{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#div-input{
+  margin-bottom: 2em;
+}
+
+input{
+  padding: 0.8em;
+  width: 50vw;
+  font-family: 'MuseoModerno', cursive;
+}
+
+label{
+  display: block;
+}
+
+textarea{
+  width: 53vw;
+}
+
+#submit-button{
+  padding: 1em;
+  cursor: pointer;
+  color: #f2f4f7;
+  background-color: #6203f0;
+  border: none;
+  border-radius: 15px;
+}
+
+
+#submit-button:hover{
+  background-color:#7742c5 ;
+ 
+}
+  
+
   @media only screen and (max-width: 768px) {
     .msg-board{
         display: flex;
